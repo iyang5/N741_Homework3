@@ -1,0 +1,51 @@
+---
+title: "Homework 3 2018"
+author: "Irene Yang"
+date: "2/28/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The following is documentation that I have installed and loaded the necessary packages and files for class on 2/28.  
+
+1. Document that you have installed `dada2` and `phyloseq`, as well as `shortread` and `ggplot2`. 
+
+```{r HW3Q1}
+
+# First make sure you have the latest version of R and Bioconductor, then install the current release of dada2 (packageVersion 1.6.0), phyloseq (packageVersion 1.22.3), and ShortRead (packageVersion 1.36.1) from bioconductor
+
+source("https://bioconductor.org/biocLite.R")
+biocLite("dada2")
+biocLite("phyloseq")
+biocLite("ShortRead")
+
+# If you already have these packages, load them
+library(dada2); packageVersion("dada2")
+library(phyloseq); packageVersion("phyloseq")
+library(ShortRead); packageVersion("ShortRead")
+
+#Also load ggplot2 (packageVersion 2.2.1)
+library(ggplot2); packageVersion("ggplot2")
+```
+
+2. Please document that you have downloaded THREE additional files as follows: 
+* fastq files from the Mothur MiseqSOP walkthrough
+* RDP training set
+* RDP species assignment set
+
+```{r H3Q2}
+
+path <- "~/Desktop/N741/2018week6/MiSeq_SOP"
+fns <- list.files(path)
+
+fns
+
+path2 <- "~/Desktop/N741/2018week6/RDP Data"
+fns2 <- list.files(path2)
+
+fns2
+```
+
